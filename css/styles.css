@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Common Styles */
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.save-field{
+    width: 80px;
+}
+
+
+#calculation-field{
+    background-color: #E1E5EA;
+}
+

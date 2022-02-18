@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- External Stylesheet  -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Savings Calculator</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container text-center mt-5">
+            <h1 class="fw-bold">Savings Calculator<svg class="text-success" style="height: 51px; margin-left: 5px;"
+                    xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                    <path fill-rule="evenodd"
+                        d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
+                        clip-rule="evenodd" />
+                </svg></h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="cover">
+                        <img class="w-100" src="./images/cover.jpg" alt="">
+                    </div>
+                </div>
+                <div id="calculation-field" class="col-md-6 col-sm-12 mt-5 py-5 rounded">
+                    <div class=" w-75 mx-auto">
+                        <h5 class="text-center fw-bolder">Income</h5>
+                        <div class="mb-3 row">
+                            <label for="income" class="col-sm-2 col-form-label text-secondary">Income</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="income">
+                                <small id="income-error" class="text-danger"></small>
+                            </div>
+                        </div>
+                        <h5 class="text-center fw-bold">Expenses</h5>
+                        <div class="mb-3 row">
+                            <label for="food" class="col-sm-2 col-form-label text-secondary">Food</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="food">
+                                <small id="food-error" class="text-danger"></small>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="rent" class="col-sm-2 col-form-label text-secondary">Rent</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="rent">
+                                <small id="rent-error" class="text-danger"></small>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="clothes" class="col-sm-2 col-form-label text-secondary">Clothes</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="clothes">
+                                <small id="clothes-error" class="text-danger"></small>
+                            </div>
+                        </div>
+
+                        <div class="text-center mb-5">
+                            <button id="calculate-btn" class="btn btn-primary btn-lg mb-2">Calculate</button> <br>
+                            <small id="debit-credit-error" class="text-danger"></small>
+                        </div>
+
+
+
+
+                        <h5 class="text-center fw-bold mb-4">Total Expenses: <span id="expense"><svg
+                                    style="height: 25px; width: 25px; color: red;" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                </svg></span></h5>
+
+                        <h5 class="text-center fw-bold mb-5">Balance: <span id="balance"><svg
+                                    style="height: 25px; width: 25px; color: red;" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                </svg></span>
+                        </h5>
+
+                        <div class="row text-center">
+                            <label for="save" class="col-sm-2 col-form-label text-secondary">Save</label>
+                            <div class="col-sm-10 d-flex mb-2">
+                                <input type="text" class="form-control save-field" id="save-percentage">
+                                <h5 class="d-inline mx-3 my-auto">% </h5>
+                                <button id="save=btn" class="btn btn-success">Save</button>
+                            </div>
+
+                            <small id="save-error" class="text-danger"></small>
+                        </div>
+
+                        <h5 class="text-center fw-bold mb-4 mt-5">Saving Amount: <span id="savings"><svg
+                                    style="height: 25px; width: 25px; color: red;" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                </svg></span></h5>
+
+                        <h5 class="text-center fw-bold mb-3">Remaining Balance: <span id="remains"><svg
+                                    style="height: 25px; width: 25px; color: red;" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                </svg></span></h5>
+
+                        <div class="text-center">
+                            <button id="reset" class="btn btn-secondary btn-lg mt-4">Reset</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
