@@ -86,13 +86,33 @@ function resetFields() {
     clearInputField('save-percentage');
 
 
-    document.getElementById('expense').innerText = "";
+    document.getElementById('expense').innerHTML = `<svg
+    style="height: 25px; width: 25px; color: red;" xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+</svg>`;
 
-    document.getElementById('balance').innerText = "";
+    document.getElementById('balance').innerHTML = `<svg
+    style="height: 25px; width: 25px; color: red;" xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+</svg>`;
 
-    document.getElementById('savings').innerText = "";
+    document.getElementById('savings').innerHTML = `<svg
+    style="height: 25px; width: 25px; color: red;" xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+</svg>`;
 
-    document.getElementById('remains').innerText = "";
+    document.getElementById('remains').innerHTML = `<svg
+    style="height: 25px; width: 25px; color: red;" xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+</svg>`;
 }
 
 
